@@ -9,19 +9,19 @@ const InstagramFeed = () => {
         {/* Profile */}
         <div className="flex items-center gap-3 p-3">
           <Image
-            src="/images/jee.jpg"
+            src="/images/rohit.jpeg"
             alt="profile"
             width={40}
             height={40}
             className="rounded-full"
           />
-          <p className="font-semibold text-sm">its.jee5001</p>
+          <p className="font-semibold text-sm">__rohit_90__</p>
         </div>
 
         {/* Post Image */}
         <div className="relative w-full aspect-square">
           <Image
-            src="/images/jee.jpg"
+            src="/images/rohit.jpeg"
             alt="post"
             fill
             className="object-cover"
@@ -34,16 +34,16 @@ const InstagramFeed = () => {
         </div>
 
         {/* Likes */}
-        <p className="px-3 text-sm font-semibold">128 likes</p>
+        <p className="px-3 text-sm font-semibold">2k likes</p>
 
         {/* Caption */}
         <p className="px-3 py-1 text-sm">
-          <span className="font-semibold">its.jee5001</span> #Jeevan
+          <span className="font-semibold">__rohit_90___</span> #rohit jaan i want sex please i do rape
         </p>
 
         {/* Time */}
         <p className="px-3 pb-3 text-xs text-gray-500">
-          2 hours ago
+          10 hours ago
         </p>
 
       </div>

@@ -15,7 +15,7 @@ const StoryAvatar = () => {
 
       {/* Story Item */}
       {[
-        { img: "/images/jee.jpg", name: "its.jee5001" },
+        { img: "/images/rohit.jpeg", name: "__rohit_90__" },
         { img: "/images/creatorv30.jpg", name: "creatorv30" },
         { img: "/images/varads2.jpeg", name: "varads2" },
         { img: "/images/aditya.jpeg", name: "adi_shirke_3540" },
