@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const InstagramFeed = () => {
   return (
-    <div className="w-full flex justify-center mt-8 ml-2">
+    <div className="w-full flex justify-center mt-8">
       {/* Feed Box */}
-      <div className="w-[500px] bg-white border rounded">
+      <div className="w-[500px] bg-white">
 
-        {/* Profile */}
+        {/* Profile Row */}
         <div className="flex items-center gap-3 p-3">
           <Image
             src="/images/varad.jpeg"
@@ -15,11 +15,32 @@ const InstagramFeed = () => {
             height={40}
             className="rounded-full"
           />
+
           <p className="font-semibold text-sm">varad2_</p>
+
+          <Image
+            src="/images/veri.jfif"
+            alt="verified"
+            width={16}
+            height={16}
+          />
+
+          <p className="text-sm text-gray-500">· 1d</p>
+
+          {/* Menu dots */}
+          <div className="ml-auto">
+            <Image
+              src="/images/dots.png"
+              alt="menu"
+              width={18}
+              height={18}
+              className="cursor-pointer"
+            />
+          </div>
         </div>
 
         {/* Post Image */}
-        <div className="relative w-full aspect-square">
+        <div className="relative w-full aspect-square border rounded">
           <Image
             src="/images/varad.jpeg"
             alt="post"
@@ -38,7 +59,7 @@ const InstagramFeed = () => {
 
         {/* Caption */}
         <p className="px-3 py-1 text-sm">
-          <span className="font-semibold">varad2_</span>Professional Computer Engineer !!
+          <span className="font-semibold">varad2_</span> Professional Computer Engineer !!
         </p>
 
         {/* Time */}

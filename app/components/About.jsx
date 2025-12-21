@@ -2,31 +2,52 @@ import Image from "next/image";
 
 const InstagramFeed = () => {
   return (
-    <div className="w-full flex justify-center mt-8 ml-2">
-
+    <div className="w-full flex justify-center mt-8">
       {/* Feed Box */}
-      <div className="w-[400px] bg-white border rounde ">
+      <div className="w-[500px] bg-white">
 
-        {/* Profile */}
+        {/* Profile Row */}
         <div className="flex items-center gap-3 p-3">
           <Image
-            src="/images/creatorv30.jpg"
+            src="/images/varad.jpeg"
             alt="profile"
             width={40}
             height={40}
             className="rounded-full"
           />
-          <p className="font-semibold text-sm">varad</p>
+
+          <p className="font-semibold text-sm">varad2_</p>
+
+          <Image
+            src="/images/veri.jfif"
+            alt="verified"
+            width={16}
+            height={16}
+          />
+
+          <p className="text-sm text-gray-500">· 1d</p>
+
+          {/* Menu dots */}
+          <div className="ml-auto">
+            <Image
+              src="/images/dots.png"
+              alt="menu"
+              width={18}
+              height={18}
+              className="cursor-pointer"
+            />
+          </div>
         </div>
 
         {/* Post Image */}
-        <Image
-          src="/images/creatorv30.jpg"
-          alt="post"
-          width={400}
-          height={400}
-          className="w-full"
-        />
+        <div className="relative w-full aspect-square border rounded">
+          <Image
+            src="/images/varad.jpeg"
+            alt="post"
+            fill
+            className="object-cover"
+          />
+        </div>
 
         {/* Buttons */}
         <div className="flex gap-4 p-3 text-xl">
@@ -34,17 +55,16 @@ const InstagramFeed = () => {
         </div>
 
         {/* Likes */}
-        <p className="px-3 text-sm font-semibold">128 likes</p>
+        <p className="px-3 text-sm font-semibold">1M likes</p>
 
         {/* Caption */}
         <p className="px-3 py-1 text-sm">
-          <span className="font-semibold">varad</span>  
-          Learning Next.js 🚀
+          <span className="font-semibold">varad2_</span> Professional Computer Engineer !!
         </p>
 
         {/* Time */}
         <p className="px-3 pb-3 text-xs text-gray-500">
-          2 hours ago
+          10 hours ago
         </p>
 
       </div>
