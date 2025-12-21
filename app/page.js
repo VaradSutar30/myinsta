@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import Feed from "./components/Feed";
 import About from "./components/About";
+import RightSidebar from "./components/RightSidebar";
 
 const Page = () => {
   return (
@@ -26,6 +27,13 @@ const Page = () => {
           <Feed />
           <About />
         </div>
+
+
+        <div className="hidden lg:block w-[320px]">
+  <RightSidebar />
+</div>
+
+
 
       </div>
     </div>

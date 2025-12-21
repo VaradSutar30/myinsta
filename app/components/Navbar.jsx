@@ -2,16 +2,9 @@ import React from "react";
 
 const StoryAvatar = () => {
   return (
-    <div className="flex flex-row gap-6 cursor-pointer ml-2 mt-10">
+    <div className="flex flex-row gap-6 cursor-pointer ml-70 mt-2 mr-90">
 
-      {/* Instagram Logo */}
-      <div>
-        <img
-          src="/images/my-insta1.png"
-          alt="Logo"
-          className="w-24 h-24 object-contain"
-        />
-      </div>
+     
 
       {/* Story Item */}
       {[
@@ -21,11 +14,6 @@ const StoryAvatar = () => {
         { img: "/images/aditya.jpeg", name: "adi_shirke_3540" },
         { img: "/images/tushar.jpg", name: "__tushar.28" },
         { img: "/images/prathu.jpeg", name: "prathuu__3003" },
-        { img: "/images/shreyash.jpeg", name: "shreyash" },
-        { img: "/images/at.jpeg", name: "__AC__93" },
-        { img: "/images/vi.jpeg", name: "__virya__45" },
-        { img: "/images/raj.jpeg", name: "raj_dhotre_07" },
-        { img: "/images/varad.jpeg", name: "varad2_" },
       ].map((story, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">

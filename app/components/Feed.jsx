@@ -1,10 +1,12 @@
 import Image from "next/image";
+import { LuDot } from "react-icons/lu";
 
 const InstagramFeed = () => {
   return (
-    <div className="w-full flex justify-center mt-8">
-      {/* Feed Box */}
-      <div className="w-[500px] bg-white">
+    <div className="w-full flex justify-center gap-6 mt-2 ml-70">
+      
+      {/* Feed Box 1 */}
+      <div className="w-[400px] bg-white">
 
         {/* Profile Row */}
         <div className="flex items-center gap-3 p-3">
@@ -15,19 +17,10 @@ const InstagramFeed = () => {
             height={40}
             className="rounded-full"
           />
-
           <p className="font-semibold text-sm">varad2_</p>
+          <LuDot />
+          <p className="text-sm text-gray-500">1d</p>
 
-          <Image
-            src="/images/veri.jfif"
-            alt="verified"
-            width={16}
-            height={16}
-          />
-
-          <p className="text-sm text-gray-500">· 1d</p>
-
-          {/* Menu dots */}
           <div className="ml-auto">
             <Image
               src="/images/dots.png"
@@ -40,12 +33,12 @@ const InstagramFeed = () => {
         </div>
 
         {/* Post Image */}
-        <div className="relative w-full aspect-square border rounded">
+        <div className="relative w-full aspect-square rounded">
           <Image
             src="/images/varad.jpeg"
             alt="post"
             fill
-            className="object-cover"
+            className="object-cover border rounded"
           />
         </div>
 
@@ -66,9 +59,11 @@ const InstagramFeed = () => {
         <p className="px-3 pb-3 text-xs text-gray-500">
           10 hours ago
         </p>
+      </div>
+
+      
 
       </div>
-    </div>
   );
 };
 
