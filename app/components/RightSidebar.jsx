@@ -11,8 +11,16 @@ const suggestions = [
 
 const RightSidebar = () => {
   return (
-    <div className="hidden lg:block fixed top-0 right-0 h-screen w-[320px] p-4 bg-white">
-
+    <div
+      className="
+        block
+        w-full
+        bg-white
+        p-4
+        md:max-w-[500px] md:mx-auto
+        lg:fixed lg:top-0 lg:right-0 lg:h-screen lg:w-[320px]
+      "
+    >
       {/* User Profile */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -29,22 +37,24 @@ const RightSidebar = () => {
           </div>
         </div>
 
-        <button className="text-blue-500 text-xs font-semibold cursor-pointer">
+        <button className="text-blue-500 text-xs font-semibold">
           Switch
         </button>
       </div>
 
       {/* Suggestions Header */}
-      <div className="flex justify-between text-sm text-gray-500 mb-4 cursor-pointer">
+      <div className="flex justify-between text-sm text-gray-500 mb-4">
         <p>Suggested for you</p>
-        <p className="text-black font-semibold cursor-pointer">See All</p>
+        <p className="text-black font-semibold cursor-pointer">
+          See All
+        </p>
       </div>
 
       {/* Suggestions List */}
       {suggestions.map((user, index) => (
         <div
           key={index}
-          className="flex items-center justify-between mb-4 cursor-pointer"
+          className="flex items-center justify-between mb-4"
         >
           <div className="flex items-center gap-3">
             <Image
@@ -56,11 +66,13 @@ const RightSidebar = () => {
             />
             <div>
               <p className="text-sm font-semibold">{user}</p>
-              <p className="text-xs text-gray-500">Suggested for you</p>
+              <p className="text-xs text-gray-500">
+                Suggested for you
+              </p>
             </div>
           </div>
 
-          <button className="text-blue-500 text-xs font-semibold cursor-pointer">
+          <button className="text-blue-500 text-xs font-semibold">
             Follow
           </button>
         </div>

@@ -3,11 +3,19 @@ import { LuDot } from "react-icons/lu";
 
 const InstagramFeed = () => {
   return (
-    <div className="w-full flex justify-center gap-6 mt-2 ml-70">
+    <div className="w-full flex justify-center mt-4 px-2 lg:px-0">
       
-      {/* Feed Box 1 */}
-      <div className="w-[400px] bg-white">
-
+      {/* Feed Column */}
+      <div
+        className="
+          w-full
+          max-w-[470px]
+          lg:max-w-[600px]
+          bg-white
+          lg:ml-[240px]
+          lg:mr-[340px]
+        "
+      >
         {/* Profile Row */}
         <div className="flex items-center gap-3 p-3">
           <Image
@@ -33,37 +41,37 @@ const InstagramFeed = () => {
         </div>
 
         {/* Post Image */}
-        <div className="relative w-full aspect-square rounded">
+        <div className="relative w-full aspect-square bg-black rounded">
           <Image
             src="/images/varad.jpeg"
             alt="post"
             fill
-            className="object-cover border rounded"
+            className="object-cover rounded"
           />
         </div>
 
-        {/* Buttons */}
+        {/* Actions */}
         <div className="flex gap-4 p-3 text-xl">
           ❤️ 💬 📤
         </div>
 
         {/* Likes */}
-        <p className="px-3 text-sm font-semibold">1M likes</p>
+        <p className="px-3 text-sm font-semibold">
+          1M likes
+        </p>
 
         {/* Caption */}
         <p className="px-3 py-1 text-sm">
-          <span className="font-semibold">varad2_</span> Professional Computer Engineer !!
+          <span className="font-semibold">varad2_</span>{" "}
+          Professional Computer Engineer !!
         </p>
 
         {/* Time */}
-        <p className="px-3 pb-3 text-xs text-gray-500">
+        <p className="px-3 pb-4 text-xs text-gray-500">
           10 hours ago
         </p>
       </div>
-
-      
-
-      </div>
+    </div>
   );
 };
 
