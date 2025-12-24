@@ -6,38 +6,31 @@ import Feed from "./components/Feed";
 import About from "./components/About";
 import RightSidebar from "./components/RightSidebar";
 
-const Page = () => {
+function Page() {
   return (
     <div className="w-full min-h-screen">
-
-      {/* Navbar */}
       <Navbar />
 
-      {/* Main Layout */}
-      <div className="flex w-50">
-
-        {/* Sidebar */}
-        <div className="w-50">
+      <div className="flex w-full">
+        {/* Left Sidebar */}
+        <aside className="hidden md:block w-[240px] sticky top-0 h-screen">
           <Sidebar />
-        </div>
+        </aside>
 
         {/* Main Content */}
-        <div className="flex flex-col flex-1 gap-4 p-4">
+        <main className="flex-1 flex flex-col gap-6 md:p-4">
           <Hero />
           <Feed />
           <About />
-        </div>
+        </main>
 
-
-        <div className="hidden lg:block w-[320px]">
-  <RightSidebar />
-</div>
-
-
-
+        {/* Right Sidebar */}
+        <aside className="hidden lg:block w-[320px] sticky top-0 h-screen">
+          <RightSidebar />
+        </aside>
       </div>
     </div>
   );
-};
+}
 
 export default Page;

@@ -3,21 +3,17 @@ import { LuDot } from "react-icons/lu";
 
 const InstagramFeed = () => {
   return (
-    <div className="w-full flex justify-center mt-4 px-2 lg:px-0">
-      
+    <div className="w-full flex mt-2 md:mt-4 md:px-2">
+
       {/* Feed Column */}
       <div
         className="
           w-full
-          max-w-[470px]
-          lg:max-w-[600px]
           bg-white
-          lg:ml-[240px]
-          lg:mr-[340px]
         "
       >
         {/* Profile Row */}
-        <div className="flex items-center gap-3 p-3">
+        <div className="w-full flex items-center gap-2 p-2">
           <Image
             src="/images/varad.jpeg"
             alt="profile"
@@ -25,9 +21,9 @@ const InstagramFeed = () => {
             height={40}
             className="rounded-full"
           />
-          <p className="font-semibold text-sm">varad2_</p>
+          <p className="font-semibold text-sm -mr-2">varad2_</p>
           <LuDot />
-          <p className="text-sm text-gray-500">1d</p>
+          <p className="text-sm text-gray-500 -ml-2">1d</p>
 
           <div className="ml-auto">
             <Image
@@ -41,14 +37,16 @@ const InstagramFeed = () => {
         </div>
 
         {/* Post Image */}
-        <div className="relative w-full aspect-square bg-black rounded">
+        <div className="relative w-full aspect-square">
           <Image
             src="/images/varad.jpeg"
             alt="post"
             fill
-            className="object-cover rounded"
+            className="object-cover"
+            priority
           />
         </div>
+
 
         {/* Actions */}
         <div className="flex gap-4 p-3 text-xl">

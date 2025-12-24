@@ -8,16 +8,17 @@ const StoryAvatar = () => {
     { img: "/images/aditya.jpeg", name: "adi_shirke_3540" },
     { img: "/images/tushar.jpg", name: "__tushar.28" },
     { img: "/images/prathu.jpeg", name: "prathuu__3003" },
+    { img: "/images/tushar.jpg", name: "__tushar.28" },
   ];
 
   return (
     <div
       className="
         flex gap-4
-        px-4 mt-3
+        px-4 mt-3 md:ml-60
         overflow-x-auto
         scrollbar-hide
-        md:justify-center
+        justify-start
       "
     >
       {stories.map((story, index) => (
