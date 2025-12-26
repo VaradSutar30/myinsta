@@ -11,16 +11,12 @@ const suggestions = [
 
 const RightSidebar = () => {
   return (
-    <div
-      className="
-        block
-        w-full
-        bg-white
-        p-4
+    <div className="
+        block w-full bg-white p-4
         md:max-w-[500px] md:mx-auto
         lg:fixed lg:top-0 lg:right-0 lg:h-screen lg:w-[320px]
-      "
-    >
+      ">
+      
       {/* User Profile */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -37,25 +33,18 @@ const RightSidebar = () => {
           </div>
         </div>
 
-        <button className="text-blue-500 text-xs font-semibold">
-          Switch
-        </button>
+        <button className="text-blue-500 text-xs font-semibold">Switch</button>
       </div>
 
       {/* Suggestions Header */}
       <div className="flex justify-between text-sm text-gray-500 mb-4">
         <p>Suggested for you</p>
-        <p className="text-black font-semibold cursor-pointer">
-          See All
-        </p>
+        <p className="text-black font-semibold cursor-pointer">See All</p>
       </div>
 
       {/* Suggestions List */}
       {suggestions.map((user) => (
-        <div
-          key={user.id}
-          className="flex items-center justify-between mb-4"
-        >
+        <div key={user.id} className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <Image
               src={user.image}
@@ -66,21 +55,19 @@ const RightSidebar = () => {
             />
             <div>
               <p className="text-sm font-semibold">{user.username}</p>
-              <p className="text-xs text-gray-500">
-                Suggested for you
-              </p>
+              <p className="text-xs text-gray-500">Suggested for you</p>
             </div>
           </div>
 
-          <button className="text-blue-500 text-xs font-semibold">
-            Follow
-          </button>
-          <div className="text-black flex flex-row">
-          <p>About.Help.Press.API.jobs.privacy.Terms. Location.Language.Meta Verified</p>
+          <button className="text-blue-500 text-xs font-semibold">Follow</button>
         </div>
-        </div>
-      
       ))}
+
+      {/* Footer */}
+      <div className="mt-6 text-xs text-gray-400 leading-relaxed">
+        About · Help · Press · API · Jobs · Privacy · Terms <br />
+        Location · Language · Meta Verified
+      </div>
     </div>
   );
 };
