@@ -17,7 +17,7 @@ const InstagramFeed = () => {
 
   return (
     <div className="w-full flex mt-2 md:mt-4 md:px-2 justify-center">
-      <div className="w-full max-w-[470px] bg-white border">
+      <div className="w-full max-w-[470px] bg-white">
 
         {/* Profile Row */}
         <div className="w-full flex items-center gap-2 p-2">
