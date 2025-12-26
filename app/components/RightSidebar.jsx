@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 const suggestions = [
-  "varad_dev",
-  "react_guy",
-  "frontend_ui",
-  "nextjs_dev",
-  "tailwind_css",
+  { id: 1, username: "virat.kohli", image: "/images/virat.jpeg" },
+  { id: 2, username: "rohitsharma45", image: "/images/rohit.jpeg" },
+  { id: 3, username: "surya_14kumar", image: "/images/surya.jpeg" },
+  { id: 4, username: "hardikpandya93", image: "/images/pandya.jpeg" },
+  { id: 5, username: "mahi7781", image: "/images/msd.jpeg" },
 ];
 
 const RightSidebar = () => {
@@ -51,21 +51,21 @@ const RightSidebar = () => {
       </div>
 
       {/* Suggestions List */}
-      {suggestions.map((user, index) => (
+      {suggestions.map((user) => (
         <div
-          key={index}
+          key={user.id}
           className="flex items-center justify-between mb-4"
         >
           <div className="flex items-center gap-3">
             <Image
-              src="/images/varad.jpeg"
+              src={user.image}
               alt="suggestion"
               width={32}
               height={32}
               className="rounded-full"
             />
             <div>
-              <p className="text-sm font-semibold">{user}</p>
+              <p className="text-sm font-semibold">{user.username}</p>
               <p className="text-xs text-gray-500">
                 Suggested for you
               </p>
@@ -75,7 +75,11 @@ const RightSidebar = () => {
           <button className="text-blue-500 text-xs font-semibold">
             Follow
           </button>
+          <div className="text-black flex flex-row">
+          <p>About.Help.Press.API.jobs.privacy.Terms. Location.Language.Meta Verified</p>
         </div>
+        </div>
+      
       ))}
     </div>
   );

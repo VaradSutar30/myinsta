@@ -9,12 +9,13 @@ import { RiMovieLine, RiTelegram2Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoIosAdd } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
+import SidebarButton from "./SidebarButton";
 
 const Sidebar = () => {
   return (
     <>
       {/* ===== DESKTOP SIDEBAR ===== */}
-      <div className="hidden lg:flex flex-col gap-2 fixed top-0 left-0 h-screen w-60 border-r border-gray-200 p-4 bg-white text-black font-semibold">
+      <div className="hidden lg:flex flex-col gap-2 fixed top-0 left-0 h-screen w-[240px] border-r border-gray-300 p-4 bg-white text-black font-semibold z-50">
         {/* Logo */}
         <div className="mb-6">
           <Image
@@ -26,13 +27,13 @@ const Sidebar = () => {
           />
         </div>
 
-        <SidebarButton icon={<GoHomeFill size={22} />} text="Home" />
-        <SidebarButton icon={<CiSearch size={22} />} text="Search" />
-        <SidebarButton icon={<MdOutlineExplore size={22} />} text="Explore" />
-        <SidebarButton icon={<RiMovieLine size={22} />} text="Reels" />
-        <SidebarButton icon={<RiTelegram2Line size={22} />} text="Messages" />
-        <SidebarButton icon={<FaRegHeart size={22} />} text="Notifications" />
-        <SidebarButton icon={<IoIosAdd size={22} />} text="Create" />
+        <SidebarButton icon={<GoHomeFill size={22} />} text="Home" link="/home" />
+        <SidebarButton icon={<CiSearch size={22} />} text="Search" link="/search" />
+        <SidebarButton icon={<MdOutlineExplore size={22} />} text="Explore" link="/explore" />
+        <SidebarButton icon={<RiMovieLine size={22} />} text="Reels" link="/reels" />
+        <SidebarButton icon={<RiTelegram2Line size={22} />} text="Messages" link="/message" />
+        <SidebarButton icon={<FaRegHeart size={22} />} text="Notifications" link="/notification" />
+        <SidebarButton icon={<IoIosAdd size={22} />} text="Create" link="/create" />
 
         {/* Profile */}
         <button className="flex items-center gap-3 hover:bg-gray-100 px-4 py-2 rounded-lg">
@@ -48,7 +49,7 @@ const Sidebar = () => {
 
         {/* Bottom */}
         <div className="mt-auto">
-          <SidebarButton icon={<IoMenu size={24} />} text="More" />
+          <SidebarButton icon={<IoMenu size={24} />} text="More" link="/" />
         </div>
       </div>
 
@@ -70,12 +71,5 @@ const Sidebar = () => {
     </>
   );
 };
-
-const SidebarButton = ({ icon, text }) => (
-  <button className="flex items-center gap-3 hover:bg-gray-100 px-4 py-2 rounded-lg">
-    {icon}
-    <span>{text}</span>
-  </button>
-);
 
 export default Sidebar;

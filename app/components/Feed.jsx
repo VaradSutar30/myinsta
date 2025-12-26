@@ -1,17 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import { LuDot } from "react-icons/lu";
+import { FaRegHeart, FaHeart } from "react-icons/fa6";
+import { FiMessageCircle, FiSend } from "react-icons/fi";
+import { useState } from "react";
 
 const InstagramFeed = () => {
-  return (
-    <div className="w-full flex mt-2 md:mt-4 md:px-2">
+  const [liked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(128);
 
-      {/* Feed Column */}
-      <div
-        className="
-          w-full
-          bg-white
-        "
-      >
+  const handleLike = () => {
+    setLiked(!liked);
+    setLikes(prev => (liked ? prev - 1 : prev + 1));
+  };
+
+  return (
+    <div className="w-full flex mt-2 md:mt-4 md:px-2 justify-center">
+      <div className="w-full max-w-[470px] bg-white border">
+
         {/* Profile Row */}
         <div className="w-full flex items-center gap-2 p-2">
           <Image
@@ -21,6 +28,7 @@ const InstagramFeed = () => {
             height={40}
             className="rounded-full"
           />
+
           <p className="font-semibold text-sm -mr-2">varad2_</p>
           <LuDot />
           <p className="text-sm text-gray-500 -ml-2">1d</p>
@@ -48,20 +56,34 @@ const InstagramFeed = () => {
         </div>
 
 
-        {/* Actions */}
-        <div className="flex gap-4 p-3 text-xl">
-          ❤️ 💬 📤
-        </div>
+{/* Action Buttons */}
+<div className="flex items-center justify-between px-3 py-2">
+  <div className="flex items-center gap-4">
 
-        {/* Likes */}
-        <p className="px-3 text-sm font-semibold">
-          1M likes
-        </p>
+    {/* Like */}
+    <button onClick={handleLike} className="hover:scale-110 transition">
+      {liked ? (
+        <FaHeart className="text-red-500" size={24} />
+      ) : (
+        <FaRegHeart size={24} />
+      )}
+    </button>
 
-        {/* Caption */}
-        <p className="px-3 py-1 text-sm">
-          <span className="font-semibold">varad2_</span>{" "}
-          Professional Computer Engineer !!
+    {/* Comment */}
+    <button className="hover:scale-110 transition">
+      <FiMessageCircle size={24} />
+    </button>
+
+    {/* Share */}
+    <button className="hover:scale-110 transition">
+      <FiSend size={24} />
+    </button>
+
+  </div>
+</div>
+ {/* Likes */}
+        <p className="px-3 text-sm font-semibold mt-1">
+          {likes} likes
         </p>
 
         {/* Time */}
