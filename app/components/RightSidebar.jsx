@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 const suggestions = [
-  { id: 1, username: "virat.kohli", image: "/images/virat.jpeg" },
-  { id: 2, username: "rohitsharma45", image: "/images/rohit.jpeg" },
-  { id: 3, username: "surya_14kumar", image: "/images/surya.jpeg" },
-  { id: 4, username: "hardikpandya93", image: "/images/pandya.jpeg" },
-  { id: 5, username: "mahi7781", image: "/images/msd.jpeg" },
+  { id: 1, username: "virat.kohli", image: "/images/virat.jfif" },
+  { id: 2, username: "rohitsharma45", image: "/images/sharma.jfif" },
+  { id: 3, username: "surya_14kumar", image: "/images/surya.jfif" },
+  { id: 4, username: "hardikpandya93", image: "/images/Pandu.jfif" },
+  { id: 5, username: "mahi7781", image: "/images/ms.jfif" },
 ];
 
 const RightSidebar = () => {
@@ -44,14 +44,14 @@ const RightSidebar = () => {
 
       {/* Suggestions List */}
       {suggestions.map((user) => (
-        <div key={user.id} className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
+        <div key={user.id} className="flex items-center justify-between mb-4 w-full py-3">
+          <div className="flex items-center gap-3 ">
             <Image
               src={user.image}
-              alt="suggestion"
-              width={32}
-              height={32}
-              className="rounded-full"
+              alt="profile"
+              width={10}
+              height={10}
+              className="rounded-full object-cover"
             />
             <div>
               <p className="text-sm font-semibold">{user.username}</p>

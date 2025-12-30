@@ -1,9 +1,10 @@
 import React from 'react'
+import Notification from './Notification'
 
 const page = () => {
   return (
-    <div> 
-        explore
+    <div>
+      <Notification/>
     </div>
   )
 }

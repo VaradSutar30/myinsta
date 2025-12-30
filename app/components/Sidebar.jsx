@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { GoHomeFill } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
@@ -15,7 +14,10 @@ const Sidebar = () => {
   return (
     <>
       {/* ===== DESKTOP SIDEBAR ===== */}
-      <div className="hidden lg:flex flex-col gap-2 fixed top-0 left-0 h-screen w-[240px] border-r border-gray-300 p-4 bg-white text-black font-semibold z-50">
+<div className="hidden lg:flex flex-col gap-2 fixed top-0 left-0 h-screen w-[240px] border-r border-gray-300 p-4 bg-white text-black font-semibold z-50">
+  {/* Sidebar content */}
+
+
         {/* Logo */}
         <div className="mb-6">
           <Image
@@ -27,47 +29,50 @@ const Sidebar = () => {
           />
         </div>
 
-        <SidebarButton icon={<GoHomeFill size={22} />} text="Home" link="/home" />
+        <SidebarButton icon={<GoHomeFill size={22} />} text="Home" link="home/" />
         <SidebarButton icon={<CiSearch size={22} />} text="Search" link="/search" />
         <SidebarButton icon={<MdOutlineExplore size={22} />} text="Explore" link="/explore" />
         <SidebarButton icon={<RiMovieLine size={22} />} text="Reels" link="/reels" />
-        <SidebarButton icon={<RiTelegram2Line size={22} />} text="Messages" link="/message" />
-        <SidebarButton icon={<FaRegHeart size={22} />} text="Notifications" link="/notification" />
+        <SidebarButton icon={<RiTelegram2Line size={22} />} text="Messages" link="/messages" />
+        <SidebarButton icon={<FaRegHeart size={22} />} text="Notification" link="/notification" />
         <SidebarButton icon={<IoIosAdd size={22} />} text="Create" link="/create" />
 
         {/* Profile */}
-        <button className="flex items-center gap-3 hover:bg-gray-100 px-4 py-2 rounded-lg">
-          <Image
-            src="/images/varad.jpeg"
-            alt="profile"
-            width={24}
-            height={24}
-            className="rounded-full"
-          />
-          <span>Profile</span>
-        </button>
+        <SidebarButton
+          link="/profile"
+          text="Profile"
+          icon={
+            <Image
+              src="/images/varad.jpeg"
+              alt="Profile"
+              width={26}
+              height={26}
+              className="rounded-full"
+            />
+          }
+        />
 
-        {/* Bottom */}
         <div className="mt-auto">
-          <SidebarButton icon={<IoMenu size={24} />} text="More" link="/" />
+          <SidebarButton icon={<IoMenu size={24} />} text="More" link="/more" />
         </div>
       </div>
 
-      {/* ===== MOBILE BOTTOM NAV ===== */}
+      {/* ===== MOBILE NAV ===== */}
       <div className="lg:hidden fixed bottom-0 left-0 w-full h-14 bg-white border-t border-gray-200 flex justify-around items-center z-50">
-        <GoHomeFill size={22} />
-        <CiSearch size={22} />
-        <MdOutlineExplore size={22} />
-        <RiMovieLine size={22} />
-        <FaRegHeart size={22} />
-        <Image
-          src="/images/varad.jpeg"
-          alt="profile"
-          width={24}
-          height={24}
-          className="rounded-full"
-        />
-      </div>
+  <GoHomeFill size={22} />
+  <CiSearch size={22} />
+  <MdOutlineExplore size={22} />
+  <RiMovieLine size={22} />
+  <FaRegHeart size={22} />
+  <Image
+    src="/images/varad.jpeg"
+    alt="profile"
+    width={24}
+    height={24}
+    className="rounded-full"
+  />
+</div>
+
     </>
   );
 };
